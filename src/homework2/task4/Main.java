@@ -1,20 +1,20 @@
-package homework2.task4;
+package  homework2.task4;
 
 import homework2.task3.Car;
 
 public class Main {
     public static void main(String[] args) {
         Car carDefault1 = new Car();
-        Car carWithOneParemeter = new Car(2015);
-        Car carWithTwoParemeters = new Car(1995, 300);
-        Car carWithThreeParemeters = new Car(2003, 180, 4000);
-        Car carWithFourParemeters = new Car(1997, 200, 1500, "Red");
+        Car carWithOnePyearmeter = new Car(2015);
+        Car carWithTwoPyearmeters = new Car(1995, 300);
+        Car carWithThreePyearmeters = new Car(2003, 180, 4000);
+        Car carWithFourPyearmeters = new Car(1997, 200, 1500, "Red");
 
-        // System.out.println("Age : "+ carDefault1.age + ", speed : " + carDefault1.speed + ", weight : " + carDefault1.weight + ", colour : " + carDefault1.colour);
-        // System.out.println("Age : "+ carWithOneParemeter.age + ", speed : " + carWithOneParemeter.speed + ", weight : " + carWithOneParemeter.weight + ", colour : " + carWithOneParemeter.colour);
-        //System.out.println("Age : "+ carWithTwoParemeters.age + ", speed : " + carWithTwoParemeters.speed + ", weight : " + carWithTwoParemeters.weight + ", colour : " + carWithTwoParemeters.colour);
-        //System.out.println("Age : "+ carWithThreeParemeters.age + ", speed : " + carWithThreeParemeters.speed + ", weight : " + carWithThreeParemeters.weight + ", colour : " + carWithThreeParemeters.colour);
-        //System.out.println("Age : "+ carWithFourParemeters.age + ", speed : " + carWithFourParemeters.speed + ", weight : " + carWithFourParemeters.weight + ", colour : " + carWithFourParemeters.colour);
+        System.out.println("year : "+ carDefault1.year + ", speed : " + carDefault1.speed + ", weight : " + carDefault1.weight + ", colour : " + carDefault1.colour);
+         System.out.println("year : "+ carWithOnePyearmeter.year + ", speed : " + carWithOnePyearmeter.speed + ", weight : " + carWithOnePyearmeter.weight + ", colour : " + carWithOnePyearmeter.colour);
+        System.out.println("year : "+ carWithTwoPyearmeters.year + ", speed : " + carWithTwoPyearmeters.speed + ", weight : " + carWithTwoPyearmeters.weight + ", colour : " + carWithTwoPyearmeters.colour);
+        System.out.println("year : "+ carWithThreePyearmeters.year + ", speed : " + carWithThreePyearmeters.speed + ", weight : " + carWithThreePyearmeters.weight + ", colour : " + carWithThreePyearmeters.colour);
+        System.out.println("year : "+ carWithFourPyearmeters.year + ", speed : " + carWithFourPyearmeters.speed + ", weight : " + carWithFourPyearmeters.weight + ", colour : " + carWithFourPyearmeters.colour);
 
 
     }
