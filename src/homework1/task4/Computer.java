@@ -4,9 +4,6 @@ import java.util.Arrays;
 
 public class Computer {
     String element;
-    public Computer(){
-        this.element = element;
-    }
 
     public static void main(String[] args) {
         Computer[] computer = new Computer[5];
@@ -20,8 +17,14 @@ public class Computer {
         for (int i = 0; i < computer.length; i++) {
             computer[i].element = "element" + i;
         }
-
         System.out.print(Arrays.toString(computer));
 
     }
+    @Override
+    public String toString () {
+        return "Computer{" +
+                "element='" + element + '\'' +
+                '}';
+    }
+
 }
