@@ -1,6 +1,6 @@
 package  homework2.task4;
 
-import homework2.task3.Car;
+import homework2.task4.Car;
 
 public class Main {
     public static void main(String[] args) {

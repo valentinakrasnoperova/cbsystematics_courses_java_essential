@@ -25,10 +25,10 @@ public class Car {
 
 
     public Car(int i, double i1, int i2, String red) {
-        this.year = year;
-        this.speed = speed;
-        this.weight = weight;
-        this.colour = colour;
+        this.year = i;
+        this.speed = i1;
+        this.weight = i2;
+        this.colour = red;
     }
 
 }
