@@ -1,18 +1,28 @@
 package homework3.task2;
 
 public class ClassRoom {
-    Pupil[] pupils;
+    public int index = 0;
+    public Pupil[] pupils;
 
-    public ClassRoom(Pupil[] pupils) {
-        this.pupils = pupils;
+    public ClassRoom(int maxClassSize) {
+        this.pupils = new Pupil[maxClassSize];
+    }
+
+    public void addPupil(Pupil pupil){
+        if(index == pupils.length){
+            System.out.println("Threre is no more place in the class");
+        }
+        pupils[index++] = pupil;
     }
 
     public void showActivity() {
-        for (Pupil ppl : pupils) {
-            ppl.read();
-            ppl.write();
-            ppl.study();
-            ppl.relax();
+        Pupil pupil;
+        for (int i = 0; i<index;i++ ) {
+            pupil = pupils[i];
+            pupil.read();
+            pupil.write();
+            pupil.study();
+            pupil.relax();
 
         }
     }
