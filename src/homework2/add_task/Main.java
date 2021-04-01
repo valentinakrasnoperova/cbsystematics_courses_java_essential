@@ -8,7 +8,6 @@ public class Main {
         System.out.println("Enter the radius : ");
         int radius = input.nextInt();
 
-        MyArea area = new MyArea();
         System.out.println(MyArea.areaOfCircle(radius));
 
 
