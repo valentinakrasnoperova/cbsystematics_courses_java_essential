@@ -1,10 +1,14 @@
 package homework3.add_task;
 
 public class Printer {
-    Printer(String value){
+    protected String value;
 
+    Printer(String value) {
+        this.value = value;
     }
-    public void print(String value){
+
+    public void print(String value) {
         System.out.println(value);
     }
+
 }
