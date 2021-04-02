@@ -8,5 +8,4 @@ public class ExpertDocumentWorker extends DocumentWorker {
         System.out.println("Document was saved as a new version");
     }
 
-    ;
 }
