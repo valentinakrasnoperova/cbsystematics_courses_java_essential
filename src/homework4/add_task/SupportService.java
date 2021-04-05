@@ -1,8 +1,5 @@
 package homework4.add_task;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class SupportService {
     public static void main(String[] args) {
 
