@@ -11,6 +11,8 @@ public class Profile {
     int customerID;
     int supportSpecialistID;
 
+
+
     public Profile(String firstName, String lastName, String email, String phoneNumber, String address, String postalCode, int customerID, int supportSpecialistID) {
         this.firstName = firstName;
         this.lastName = lastName;
