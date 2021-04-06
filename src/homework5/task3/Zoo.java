@@ -15,13 +15,16 @@ public class Zoo {
         animals.add(6, "Elephant");
         animals.add(7, "Racoon");
 
-        animals.remove(3);
-        animals.remove(4);
-        animals.remove(5);
+        String third = animals.get(3);
+        String fifth = animals.get(5);
+        String seventh = animals.get(7);
+
+        animals.remove(third);
+        animals.remove(fifth);
+        animals.remove(seventh);
 
         System.out.println(animals);
         System.out.println(animals.size());
-
 
 
     }

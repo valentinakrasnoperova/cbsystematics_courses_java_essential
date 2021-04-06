@@ -8,20 +8,18 @@ public class Profile {
     String phoneNumber;
     String address;
     String postalCode;
-    int customerID;
-    int supportSpecialistID;
+    int customerOrSpecialistID;
 
 
 
-    public Profile(String firstName, String lastName, String email, String phoneNumber, String address, String postalCode, int customerID, int supportSpecialistID) {
+    public Profile(String firstName, String lastName, String email, String phoneNumber, String address, String postalCode, int customerOrSpecialistID) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.postalCode = postalCode;
-        this.customerID = customerID;
-        this.supportSpecialistID = supportSpecialistID;
+        this.customerOrSpecialistID = customerOrSpecialistID;
     }
 
 }

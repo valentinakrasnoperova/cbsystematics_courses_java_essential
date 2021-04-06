@@ -23,8 +23,8 @@ public class Customer {
         this.serviceId.add(serviceID);
     }
 
-    public void setTicketID(int tiketID) {
-        this.ticketId.add(tiketID);
+    public void setTicketId(ArrayList<Integer> ticketId) {
+        this.ticketId = ticketId;
     }
 
     public void setProfileID(int profileID) {

@@ -8,7 +8,7 @@ public class Ticket {
     int customerId;
     int supportSpecialistId;
 
-    public Ticket(String serviceName, Boolean isActive, String problemDescription) {
+    public Ticket(String serviceName, Boolean isActive, int customerId, String problemDescription) {
         this.serviceName = serviceName;
         this.isActive = isActive;
         this.problemDescription = problemDescription;
