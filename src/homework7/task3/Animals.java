@@ -9,7 +9,6 @@ public enum Animals {
     }
 
 
-
     @Override
     public String toString() {
         return "name is : " + this.name() + ", age is : " + age;
