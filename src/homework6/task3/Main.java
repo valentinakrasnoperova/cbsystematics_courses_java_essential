@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         String choiceContinue;
-        Scanner input;
-        input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         double distance2;
         Distance distance1;
         distance1 = new Distance();
