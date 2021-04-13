@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         String operation;
         Scanner input = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         String choiceContinue;
         double firstOperand;
         double secondOperand;
@@ -37,10 +38,11 @@ public class Main {
                     break;
                 default:
                     System.out.println("You have chosen a wrong operation");
-            }
 
+            }
             System.out.println("Do you want to continue? y/n ");
-            choiceContinue = input.nextLine();
+            choiceContinue = in.nextLine();
+
         } while (!choiceContinue.equalsIgnoreCase("n"));
     }
 
