@@ -15,12 +15,10 @@ public class Calculator {
 
     static double division(double firstOperand, double secondOperand) {
 
-        if (secondOperand != 0) {
-            return firstOperand / secondOperand;
-        } else {
-
+        if (secondOperand == 0) {
             throw new ArithmeticException("Деление на ноль невозможно");
         }
+        return firstOperand / secondOperand;
 
     }
 }

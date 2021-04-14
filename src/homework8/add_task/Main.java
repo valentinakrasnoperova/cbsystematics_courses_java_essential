@@ -12,34 +12,40 @@ public class Main {
         double secondOperand;
 
         do {
-            System.out.println("Enter the first number : ");
-            firstOperand = Double.parseDouble(input.next());
-            System.out.println("Enter the second number : ");
-            secondOperand = Double.parseDouble(input.next());
-            System.out.println("Enter the operation : ");
-            operation = input.next();
+            try {
+                System.out.println("Enter the first number : ");
+                firstOperand = Double.parseDouble(input.next());
+                System.out.println("Enter the second number : ");
+                secondOperand = Double.parseDouble(input.next());
+                System.out.println("Enter the operation : ");
+                operation = input.next();
+                switch (operation) {
+                    case "+":
+                        System.out.println("Sum: " + Calculator.sum(firstOperand, secondOperand));
+                        break;
+                    case "-":
+                        System.out.println("Difference: " + Calculator.difference(firstOperand, secondOperand));
+                        break;
+                    case "*":
+                        System.out.println("Multiplication : " + Calculator.multiplication(firstOperand, secondOperand));
+                        break;
+                    case "/":
+                        try {
+                            System.out.println("Division : " + Calculator.division(firstOperand, secondOperand));
+                        } catch (ArithmeticException e) {
+                            System.out.println(e.getMessage());
+                        }
+                        break;
+                    default:
+                        System.out.println("You have chosen a wrong operation");
 
-            switch (operation) {
-                case "+":
-                    System.out.println("Sum: " + Calculator.sum(firstOperand, secondOperand));
-                    break;
-                case "-":
-                    System.out.println("Difference: " + Calculator.difference(firstOperand, secondOperand));
-                    break;
-                case "*":
-                    System.out.println("Multiplication : " + Calculator.multiplication(firstOperand, secondOperand));
-                    break;
-                case "/":
-                    try {
-                        System.out.println("Division : " + Calculator.division(firstOperand, secondOperand));
-                    } catch (ArithmeticException e) {
-                        System.out.println(e.getMessage());
-                    }
-                    break;
-                default:
-                    System.out.println("You have chosen a wrong operation");
+                }
+            } catch (NumberFormatException e) {
+                System.err.println("Wrong number format");
 
             }
+
+
             System.out.println("Do you want to continue? y/n ");
             choiceContinue = in.nextLine();
 

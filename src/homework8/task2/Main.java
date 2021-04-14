@@ -10,12 +10,12 @@ public class Main {
         Scanner input = new Scanner(System.in);
         Worker[] workers = new Worker[5];
         int normalValue;
+        String surnameAndInitials;
+        String position;
+        int yearWhenStarted;
+
         try {
             for (int i = 0; i < workers.length; i++) {
-                String surnameAndInitials;
-                String position;
-                int yearWhenStarted;
-
                 System.out.println("Surname and initials : ");
                 surnameAndInitials = input.next();
                 System.out.println("Position : ");
@@ -36,12 +36,17 @@ public class Main {
 
         System.out.println("Enter the experience value : ");
         normalValue = Integer.parseInt(input.next());
-        for (int i = 0; i < workers.length; i++) {
+        try {
+            int experience;
+            for (Worker worker : workers) {
 
-            int experience = 2021 - workers[i].yearWhenStarted;
-            if (experience > normalValue) {
-                System.out.println(workers[i].surnameAndInitials);
+                experience = 2021 - worker.yearWhenStarted;
+                if (experience > normalValue) {
+                    System.out.println(worker.surnameAndInitials);
+                }
             }
+        } catch (NumberFormatException e) {
+            System.out.println("Wrong number format");
         }
 
     }
