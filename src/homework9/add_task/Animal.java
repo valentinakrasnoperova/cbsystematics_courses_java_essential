@@ -32,9 +32,9 @@ public class Animal {
     @Override
     public int hashCode() {
         int result = 99;
-        result = 11 * 99 + (name == null ? 0 : name.hashCode());
-        result = 11 * 99 + (int) age;
-        result = 11 * 99 + (tail ? 1 : 0);
+        result = 11 * result + (name == null ? 0 : name.hashCode());
+        result = 11 * result + (int )age;
+        result = 11 * result + (tail ? 1 : 0);
         return result;
     }
 }
