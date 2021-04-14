@@ -40,10 +40,10 @@ public class EthernetAdapter extends Device{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof EthernetAdapter)) return false;
-        if (!super.equals(o)) return false;
-        EthernetAdapter that = (EthernetAdapter) o;
-        return getSpeed() == that.getSpeed() && Objects.equals(getMac(), that.getMac());
+        if (o == null || getClass() != o.getClass()) return false;
+        EthernetAdapter ethernetAdapter = (EthernetAdapter) o;
+        if ((speed != ethernetAdapter.speed) || (mac != ethernetAdapter.mac)) return false;
+        return true;
     }
 
     @Override

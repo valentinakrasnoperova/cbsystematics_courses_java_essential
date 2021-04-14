@@ -1,5 +1,7 @@
 package homework9.add_task;
 
+import homework9.task2.Monitor;
+
 import java.util.Objects;
 
 public class Animal {
@@ -21,9 +23,10 @@ public class Animal {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Animal)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Animal animal = (Animal) o;
-        return age == animal.age && tail == animal.tail && Objects.equals(name, animal.name);
+        if ((name != animal.name) || (age != animal.age) || (tail != animal.tail)) return false;
+        return true;
     }
 
     @Override

@@ -2,7 +2,7 @@ package homework9.task2;
 
 import java.util.Objects;
 
-public class Monitor extends Device{
+public class Monitor extends Device {
     int resolutionX;
     int resolutionY;
 
@@ -39,20 +39,20 @@ public class Monitor extends Device{
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Monitor)) return false;
-        if (!super.equals(o)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Monitor monitor = (Monitor) o;
-        return getResolutionX() == monitor.getResolutionX() && getResolutionY() == monitor.getResolutionY();
+        if ((resolutionX != monitor.resolutionX) || (resolutionY != monitor.resolutionY)) return false;
+        return true;
     }
 
     @Override
     public int hashCode() {
         int result = 17;
-        result = 88*result+(int)resolutionX;
-        result = 88*result+(int)resolutionY;
-        result = 88*result+(getManufacturer() == null ? 0 : getManufacturer().hashCode());
-        result = 88*result+Float.floatToIntBits(getPrice());
-        result = 88*result+(getSerialNumber() == null ? 0 : getSerialNumber().hashCode());
+        result = 88 * result + (int) resolutionX;
+        result = 88 * result + (int) resolutionY;
+        result = 88 * result + (getManufacturer() == null ? 0 : getManufacturer().hashCode());
+        result = 88 * result + Float.floatToIntBits(getPrice());
+        result = 88 * result + (getSerialNumber() == null ? 0 : getSerialNumber().hashCode());
         return result;
     }
 }

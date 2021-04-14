@@ -7,10 +7,10 @@ public class Device {
     float price;
     String serialNumber;
 
-    public Device(String manufacturer,float price, String serialNumber) {
+    public Device(String manufacturer, float price, String serialNumber) {
         this.price = price;
-        this.manufacturer=manufacturer;
-        this.serialNumber=serialNumber;
+        this.manufacturer = manufacturer;
+        this.serialNumber = serialNumber;
     }
 
     public String getManufacturer() {
@@ -40,23 +40,25 @@ public class Device {
     @Override
     public String toString() {
         return "Device: " + "manufacturer: " + manufacturer +
-                ", price: " + price + ", serialNumber: " + serialNumber ;
+                ", price: " + price + ", serialNumber: " + serialNumber;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Device)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         Device device = (Device) o;
-        return Float.compare(device.getPrice(), getPrice()) == 0 && Objects.equals(getManufacturer(), device.getManufacturer()) && Objects.equals(getSerialNumber(), device.getSerialNumber());
+        if ((manufacturer != device.manufacturer) || (price != device.price) || (serialNumber != device.serialNumber))
+            return false;
+        return true;
     }
 
     @Override
     public int hashCode() {
         int result = 17;
-        result = 88*result+(getManufacturer() == null ? 0 : getManufacturer().hashCode());
-        result = 88*result+Float.floatToIntBits(getPrice());
-        result = 88*result+(getSerialNumber() == null ? 0 : getSerialNumber().hashCode());
+        result = 88 * result + (getManufacturer() == null ? 0 : getManufacturer().hashCode());
+        result = 88 * result + Float.floatToIntBits(getPrice());
+        result = 88 * result + (getSerialNumber() == null ? 0 : getSerialNumber().hashCode());
         return result;
     }
 }
