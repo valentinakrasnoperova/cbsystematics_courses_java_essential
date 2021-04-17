@@ -25,27 +25,29 @@ public class MyArrayList<T> {
         this.myArray[index] = value;
     }
 
-    int get(int index) {
+    Object get(int index) {
         if (index < 0 || index > myArray.length) {
             throw new ArrayIndexOutOfBoundsException("Wrong index number");
         }
-        return (int) this.myArray[index];
+        return this.myArray[index];
     }
 
     void remove(int index) {
         if (index < 0 || index > myArray.length) {
             throw new ArrayIndexOutOfBoundsException("Wrong index number");
         }
-        int newArrayCapacity = myArray.length - 1;
-        Object[] newArray2 = new Object[newArrayCapacity];
-        System.arraycopy(myArray, 0, newArray2, 0, index);
-        System.arraycopy(myArray, index + 1, newArray2, index, newArrayCapacity - index);
-        myArray = newArray2;
+        for (int i = index; i <= this.index; i++) {
+
+            myArray[i] = myArray[i + 1];
+        }
+        myArray[this.index - 1] = null;
+        this.index--;
+
     }
 
     int indexOf(T value) {
         for (Object o : myArray) {
-            if (o == value) {
+            if (o.equals(value)) {
                 return (int) o;
             }
         }
@@ -54,7 +56,7 @@ public class MyArrayList<T> {
     }
 
     int size() {
-        return myArray.length;
+        return index;
     }
 
     @Override
@@ -68,11 +70,14 @@ public class MyArrayList<T> {
     }
 
     boolean isEmpty() {
-        if (myArray.length == 0) {
-            return true;
+        boolean i;
+        int count = 0;
+        for (Object o : myArray) {
+            if (o != null) {
+                count++;
+            }
         }
-
-        return false;
+        return i = (count == 0) && true || (count != 0) && false;
     }
 
 
