@@ -7,7 +7,7 @@ public class Main {
             myArrayList.add(i);
         }
         myArrayList.set(1, 4);
-        //myArrayList.remove(3);
+        myArrayList.remove(3);
         System.out.println(myArrayList);
         System.out.println("Value of element : " + myArrayList.get(1));
         System.out.println("Size of array: " + myArrayList.size());

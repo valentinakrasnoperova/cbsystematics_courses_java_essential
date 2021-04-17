@@ -39,9 +39,10 @@ public class MyArrayList<T> {
         for (int i = index; i <= this.index; i++) {
 
             myArray[i] = myArray[i + 1];
+            myArray[this.index - 1] = null;
+            this.index--;
         }
-        myArray[this.index - 1] = null;
-        this.index--;
+
 
     }
 
