@@ -7,13 +7,13 @@ public class Main {
             myArrayList.add(i);
         }
         myArrayList.set(1, 4);
-        myArrayList.remove(3);
+        //myArrayList.remove(3);
         System.out.println(myArrayList);
         System.out.println("Value of element : " + myArrayList.get(1));
         System.out.println("Size of array: " + myArrayList.size());
         System.out.println("Index of element: " + myArrayList.indexOf(5));
         System.out.println("Is empty : " + myArrayList.isEmpty());
-       // myArrayList.clear();
+        myArrayList.clear();
         System.out.println("Is empty : " + myArrayList.isEmpty());//after clearing
         System.out.println(myArrayList);//after clearing
     }
